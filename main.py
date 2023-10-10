@@ -101,42 +101,31 @@ def popular_month(df):
 
 
 def get_day():
-
     """
-    This function asks the user for a day and returns it.
-    Args none
-    Returns: (tuple) Lower limit, upper limit of date for data.
+    This function asks the user for a day and returns a tuple representing the lower and upper limits of the date for data.
+    Returns:
+    - tuple: (str) Lower limit date, (str) Upper limit date
     """
 
-    # global start_date
     this_month = get_month()[0]
     month = int(this_month[5:])
 
-    valid_date: bool = False
-    while not valid_date:
-        is_int: bool = False
-        day = input("\nWhich day? Please type your response as an integer?\n")
+    while True:
+        day = input("\nWhich day? Please type your response as an integer (1 to 6).\n")
         print('------------------------------------------------------------------------')
 
-        while not is_int:
-            try:
-                day = int(day)
-                is_int = True
-            except ValueError:
-                print("Sorry, I do not understand your input. Please type your"
-                      " answer as an integer from 1 to 6 ...")
+        try:
+            day = int(day)
+            if 1 <= day <= 6:
+                start_date = datetime(2017, month, day)
+                end_date = start_date + timedelta(days=1)
+                return str(start_date), str(end_date)
+            else:
+                print("Sorry, please enter an integer between 1 and 6.")
                 print('------------------------------------------------------------------------')
-
-                day = input('\nWhich day you pick?\n')
-                print('------------------------------------------------------------------------')
-
-        if 1 <= day <= 6:
-            valid_date = True
-            start_date = datetime(2017, month, day)
-        else:
-            pass
-    end_date = start_date + timedelta(days=1)
-    return str(start_date), str(end_date)
+        except ValueError:
+            print("Sorry, I do not understand your input. Please type your answer as an integer from 1 to 6.")
+            print('------------------------------------------------------------------------')
 
 
 def popular_day(df):

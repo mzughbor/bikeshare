@@ -177,9 +177,11 @@ def trip_duration(df):
 def popular_stations(df):
 
     """
-    This function finds and prints the most popular start and end station...
-    Args: bike-share dataframe
-    Returns: none
+    This function finds and prints the most popular start and end stations based on the provided bike-share dataframe.
+    Args:
+    - df: DataFrame containing bike-share data
+    Returns:
+    - None
     """
 
     pop_start = df['start_station'].mode().to_string(index=False)

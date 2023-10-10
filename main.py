@@ -10,30 +10,22 @@ CITY_DATA: dict[str, str] = {
 
 
 def get_city():
-
     """
-    This function responsible for getting city name from the user, and return filename back
-    to main() for next process...
-    Args: none
-    Returns: (str) Filename for a city's bike-share data
+    This function is responsible for getting the city name from the user and returning the corresponding filename
+    for a city's bike-share data to the main() function for further processing.
+    Returns:
+    - str: Filename for a city's bike-share data
     """
 
-    city = ''
-    while city.lower() not in CITY_DATA:
-        # we'll exit while with return statements too
+    while True:
         city = input('\nHello! Let\'s explore some US bike-share data!\n'
-                     'Would you like to see data for Chicago, New York, or Washington?\n\n')
+                     'Would you like to see data for Chicago, New York, or Washington?\n\n').lower()
 
-        if city.lower() == 'chicago':
-            return CITY_DATA['chicago']
-        elif city.lower() == 'new york' or city.lower() == 'newyork' or city.lower() == 'new-york':
-            return CITY_DATA['new york']
-        elif city.lower() == 'washington':
-            return CITY_DATA['washington']
+        if city in CITY_DATA:
+            return CITY_DATA[city]
         else:
-            # do while will reactivate question again until getting an answer
-            print('Sorry, I do not understand your input! Please input correct name: Chicago,'
-                  'New York, or Washington.')
+            print('Sorry, I do not understand your input! Please input one of the following cities: '
+                  'Chicago, New York, or Washington.')
             print('------------------------------------------------------------------------')
 
 

@@ -1,12 +1,22 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+
 
 ---
 
 ### Date created
 10, Oct 2023
+<<<<<<< HEAD
 
 ### Project Title
 Third Project in udacity "Programming for Data Science with Python" nanodegree
+=======
+
+---
+
+### Project Title
+Third Project in udacity "Programming for Data Science with Python" nanodegree
+
+---
+>>>>>>> documentation
 
 ### Description
 In this Git and GitHub Practice Project, we'll apply version control skills to refactor BikeShare project.
@@ -18,13 +28,34 @@ Here's a concise overview of the tasks we used:
 in parallel with the documentation branch
 - **Merge:** Merge both branches into the master and push changes to the remote repository. Your submission
 should include Git commands and a GitHub repository link
+<<<<<<< HEAD
+=======
+
+---
+>>>>>>> documentation
 
 ### Files used
 Files used : <a href='https://docs.google.com/document/d/1DoNBEQJyGHi0qAWpMpQM9lU9_VKh8ubdOY2BmKdvZcc/copy'>
 This Google Document<a/> as a step-by-step guide
+<<<<<<< HEAD
 
 ### Credits
 Helpful links to look at https://git-scm.com/doc
 
 ---
 Thanks, mzughbor 🖤
+=======
+
+---
+
+### Credits
+Helpful links to look at:
+
+https://git-scm.com/doc
+
+https://gitready.com
+
+---
+
+Thanks, mzughbor 🖤
+>>>>>>> documentation

@@ -398,6 +398,5 @@ def main():
         print("Thanks, 0*_0 for using our program!")
         main()
 
-
 if __name__ == "__main__":
     main()
